@@ -9,7 +9,7 @@
  
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -63,7 +63,7 @@
               <div class="contacts-item">
                 <h2 class="contact-title">Contacts</h2>
                 <div class="phon-cont">
-                  <img src="./assets/svg/phone-volume-solid.svg" alt="phone" class="icon-contact">
+                  <img src="./assets/svg/mobile-alt-solid.svg" alt="phone" class="icon-contact">
                   <p class="contact-infom">+375(29)204-05-32</p>
                 </div>
                 <div class="phon-cont">
@@ -144,6 +144,7 @@
           <details>
             <summary>CodeWars code</summary>
             <pre>
+              <code>
               function createPhoneNumber(numbers){
                 var num1 = [];
                 var num2 = [];
@@ -151,7 +152,7 @@
                 for (let i=0; i<numbers.length;i++){
                  if (i<3)
                     num1[i]=numbers[i];
-                 if (i<6 && i>2)
+                 if (i<c && i>2)
                     num2[i]=numbers[i];
                  if (i>5 )
                     num3[i]=numbers[i];
@@ -162,6 +163,7 @@
                 const str = '('+ num1 + ') '+ num2 + '-'+ num3;
                 return str;
                 }
+              </code>
             </pre>
           </details>
         </section>
