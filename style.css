@@ -242,8 +242,14 @@ html{
 
   .phon-cont{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     
+  }
+  .li-contact{
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-right: 20px;
   }
   .icon-contact{
     height: 25px;
@@ -363,6 +369,7 @@ html{
     line-height: 28px;
     color: #242424;
     padding-left: 150px;
+    cursor: pointer;
   }
   pre{
     font-size: 18px;
@@ -397,6 +404,8 @@ html{
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .inf-footer{
     display: flex;
