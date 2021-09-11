@@ -128,7 +128,16 @@ html{
     margin-bottom: 40px;
     margin-top: 40px;
   }
-  
+  .title-h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    
+  }
   .left-container{
     width: 405px;
   }
@@ -307,3 +316,17 @@ html{
 
   }
   /*skills end*/
+
+  /*work start*/
+
+.year-work{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 25px;
+
+  text-align: center;
+  color: #999999;
+}
+  /*work end*/
