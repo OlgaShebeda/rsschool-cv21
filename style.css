@@ -88,29 +88,30 @@ html{
   }
   .container{
     margin: 0 auto;
-    max-width: 1400px;
-    
+    max-width: 1365px;
+    padding: 0 40px;
    }
    .container-column{
      display: flex;
      flex-wrap: nowrap;
    }
    .light-container{
+     max-width: 800px;
     background-color: #E4E6E7;
-    background-size: 870px;
-    padding-top: 70px;
+    margin-right: 40px;
+    padding-right: 20px;
   }
   
   .blue-container{
-    width: 560px;
+    max-width: 560px;
     min-height: 1980px;
     background-color: #C0D8DE;
     margin-right: 50px;
-    padding-left: 50px;
+
     padding-top: 70px;
   }
   .light-title{
-    width: 800px;
+    max-width: 800px;
     height: 50px;
     background-color: #242424;
     font-family: Poppins;
@@ -146,18 +147,18 @@ html{
   }
   .header-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    }
+  }
   .logo-rss-img{
-    width: 140px;
+    width: 200px;
     height: 70px;
-    padding-left: 40px;
+    padding-right: 40px;
   }
    .ul-nav-header{
-    min-width: 1100px;
+    width: 1140px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -166,8 +167,8 @@ html{
    }
    .li-nav-header{
     list-style: none;
-    font-size: 30px;
-    margin-right: 30px;
+    font-size: 25px;
+    margin-right: 25px;
   }
   .li-nav-header:last-child{
     margin-right: 0px;
@@ -213,15 +214,11 @@ html{
     letter-spacing: 0.005em;
     color: #666666;
   }
-  .last-name::after{
-    display: block;
-    content: '';
-    width: 398px;
-    height: 3px;
-    background: #828282;
+  .name-border{
+    border-bottom: 3px solid #828282;
     
-    bottom: 0;
-    left: 200px;
+    width: 395px;
+    
   }
   .contacts-item{
     padding-top: 150px;
@@ -242,8 +239,14 @@ html{
 
   .phon-cont{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     
+  }
+  .li-contact{
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-right: 20px;
   }
   .icon-contact{
     height: 25px;
@@ -273,7 +276,7 @@ html{
 
  /*about-me start*/
   .about-me-inf{
-    width: 800px;
+    max-width: 800px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -284,7 +287,7 @@ html{
     letter-spacing: 0.03em;
     color: #242424;
     padding-left: 100px;
-    
+    padding-right: 100px;
   }
   /*about-me end*/
 
@@ -294,7 +297,8 @@ html{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    
+    padding-right: 150px;
+    padding-left: 150px;
   }
   .ul-nav-skills{
     width: 300px;
@@ -330,11 +334,17 @@ html{
   color: #999999;
 }
   /*work end*/
-  .brsu-img{
-    width: 600px;
-    height: 300px;
-    margin-left: 150px;
+
+  .section-cont{
+    padding: 0 100px;
   }
+  .brsu-img{
+    display: block;
+    width: 100%;
+    height: auto;
+   
+  }
+ 
   .ul-nav-language{
     width: 400px;
     height: 100px;
@@ -363,6 +373,8 @@ html{
     line-height: 28px;
     color: #242424;
     padding-left: 150px;
+    cursor: pointer;
+    margin-bottom: 40px;
   }
   pre{
     font-size: 18px;
@@ -396,10 +408,68 @@ html{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 40px;
+    padding: 30px;
+    
   }
   .inf-footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+  }
+  .code-img-link{
+    width: 160px;
+    height: 107px;
+    margin-left: 160px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width:1200px) {
+    /* header */
+    .logo-rss-img{
+      max-width: 100px;
+    }
+    .ul-nav-header{
+      max-width: 1060px;
+    }
+    .li-nav-header{
+      font-size: 20px;
+      margin-right: 20px;
+    }
+    /* footer */
+    .container-footer{
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
+    
+
+  }
+
+  @media (max-width:991px) {
+    /* header */
+    .ul-nav-header{
+      width: 650px;
+      justify-content: center;
+    }
+    .li-nav-header{
+      margin-right: 20px;
+    }
+    .logo-rss-img{
+      width: 200px;
+      height: auto;
+      padding: 0;
+    }
+    .rss-img{
+      margin-right: 120px;
+    }
+  }
+
+  @media (max-width:767px) {
+    .rss-img{
+      margin-right: 200px;
+    }
+  }
+  
+  @media (max-width:479px) {
+
   }

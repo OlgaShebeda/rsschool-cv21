@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=devisce-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -11,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">  
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    
 </head>
 <body>
     <header class = "header">
@@ -58,30 +61,32 @@
         <div class="blue-container">
           <div class="left-container">
             <img src="./assets/img/FZQAgwnYcFQ.jpg" alt="my foto" class="my-foto">
-            <h1 class="first-name" id="name">Olga<span class="last-name"> Kucheiko</span></h1>
+            <h1 class="first-name name-border" id="name">Olga<span class="last-name"> Kucheiko</span></h1>
             <section class="contact-cont" id = "contacts">
               <div class="contacts-item">
                 <h2 class="contact-title">Contacts</h2>
-                <div class="phon-cont">
-                  <img src="./assets/svg/mobile-alt-solid.svg" alt="phone" class="icon-contact">
-                  <p class="contact-infom">+375(29)204-05-32</p>
-                </div>
-                <div class="phon-cont">
-                  <img src="./assets/svg/github-brands.svg" alt="github" class="icon-contact">
-                  <p class="contact-infom">@OlgaShebeda</p>
-                </div>
-                <div class="phon-cont">
-                  <img src="./assets/svg/envelope-regular.svg" alt="email" class="icon-contact">
-                  <p class="contact-infom">KucheikoOlga@gmail.com</p>
-                </div>
-                <div class="phon-cont">
-                  <img src="./assets/svg/telegram-plane-brands.svg" alt="telegramm" class="icon-contact">
-                  <p class="contact-infom"><a href="https://t.me/ole4ka_olka" class="link-contact">@ole4ka_olka</a></p>
-                </div>
-                <div class="phon-cont">
-                  <img src="./assets/svg/map-marked-alt-solid.svg" alt="adres" class="icon-contact">
-                  <p class="contact-infom">Belarus, Brest</p>
-                </div>
+                <ul class="phon-cont">
+                  <li class="li-contact">
+                    <img src="./assets/svg/mobile-alt-solid.svg" alt="phone" class="icon-contact"> 
+                    <p class="contact-infom">+375(29)204-05-32</p>
+                  </li>
+                  <li class="li-contact">
+                    <img src="./assets/svg/github-brands.svg" alt="github" class="icon-contact">
+                    <p class="contact-infom">@OlgaShebeda</p>
+                  </li>
+                  <li class="li-contact">
+                    <img src="./assets/svg/envelope-regular.svg" alt="email" class="icon-contact">
+                    <p class="contact-infom">KucheikoOlga@gmail.com</p>
+                  </li>
+                  <li class="li-contact">
+                    <img src="./assets/svg/telegram-plane-brands.svg" alt="telegramm" class="icon-contact">
+                    <p class="contact-infom"><a href="https://t.me/ole4ka_olka" class="link-contact">@ole4ka_olka</a></p>
+                  </li>
+                  <li class="li-contact">
+                    <img src="./assets/svg/map-marked-alt-solid.svg" alt="adres" class="icon-contact">
+                    <p class="contact-infom">Belarus, Brest</p>
+                  </li>
+                </ul>
               </div>
             </section>
           </div>
@@ -115,7 +120,7 @@
         <section id="work-experiece">
           <h2 class="light-title">work experiece</h2>
           <div class="work-section">
-            <p class="title-h3">Teacher at College of Business and Law, Brest</p>
+            <h3 class="title-h3">Teacher at College of Business and Law, Brest</h3>
             <br>
             <p class="year-work">2016-present</p>
             <p class="about-me-inf">
@@ -126,10 +131,11 @@
         </section>
         <section id="education">
           <h2 class="light-title">education</h2>
-          <p class="title-h3">Master, Brest State University, Brest</p>
-            <br>
-            <p class="year-work">2011-2016</p>
-            <img src="./assets/img/BrSU.jpg" alt="BrSU" class="brsu-img">
+          <h3 class="title-h3">Master, Brest State University, Brest</h3>
+            <div class="section-cont">
+              <p class="year-work">2011-2016</p>
+              <img src="./assets/img/BrSU.jpg" alt="BrSU" class="brsu-img">
+            </div>
         </section>
         <section id="language">
           <h2 class="light-title">language</h2>
@@ -141,6 +147,7 @@
         </section>
         <section id="code-exaples">
           <h2 class="light-title">code example</h2>
+          <a href="https://adoring-morse-5d30bd.netlify.app/" target="_blank"><img src="./assets/img/museum-poster.PNG" alt="museum site" class="code-img-link"></a>
           <details>
             <summary>CodeWars code</summary>
             <pre>
@@ -162,7 +169,7 @@
                 num2= num2.join('');
                 const str = '('+ num1 + ') '+ num2 + '-'+ num3;
                 return str;
-                }
+              }
               </code></pre>
           </details>
         </section>
@@ -187,6 +194,7 @@
         </div>
       </div>
     </footer>
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
