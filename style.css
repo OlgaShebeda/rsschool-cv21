@@ -99,12 +99,13 @@ html{
      max-width: 800px;
     background-color: #E4E6E7;
     margin-right: 40px;
+    
     padding-right: 20px;
   }
   
   .blue-container{
     max-width: 560px;
-    min-height: 1980px;
+    min-height: auto;
     background-color: #C0D8DE;
     margin-right: 50px;
 
@@ -364,6 +365,9 @@ html{
     padding-left: 150px;
 
   }
+
+/* code example  start */
+
   summary{
     
     font-family: Poppins;
@@ -381,9 +385,21 @@ html{
     background-color: #d8d4d4;
 
   }
+  .code-img-link{
+    width: 160px;
+    height: 107px;
+    margin-left: 160px;
+    margin-bottom: 40px;
+  }
+
+  /* code example  end */
+
+  /* footer start */
+
   .logo-rss-img-footer{
     width: 80px;
     height: 40px;
+    margin-right: 60px;
   }
   .text{
     text-align: center;
@@ -405,24 +421,23 @@ html{
     color: #4F4F4F;
   }
   .container-footer{
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     
   }
+
   .inf-footer{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    margin: 0 auto;
   }
-  .code-img-link{
-    width: 160px;
-    height: 107px;
-    margin-left: 160px;
-    margin-bottom: 40px;
-  }
+
 
   @media (max-width:1200px) {
     /* header */
@@ -438,8 +453,7 @@ html{
     }
     /* footer */
     .container-footer{
-      padding-right: 0;
-      padding-bottom: 20px;
+      padding-left: 100px;
     }
     
 
@@ -468,8 +482,71 @@ html{
     .rss-img{
       margin-right: 200px;
     }
+
+    /* footer */
+
+    .container-footer{
+      max-width: 700px;
+    }
   }
   
   @media (max-width:479px) {
+    .container{
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container-column{
+      flex-wrap: wrap;
+    }
+
+    .blue-container{
+      width: 100%;
+      padding-left: 30px;
+    }
+
+    .light-container{
+      max-width: 479px;
+      margin-top: 60px;
+    }
+
+    .left-container{
+      max-width: 320px;
+    }
+
+    /* header */
+
+    .nav-header{
+      display: none;
+    }
+
+    /* contacts */
+
+    .my-foto{
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    .first-name{
+      font-size: 40px;
+      line-height: 70px;
+    }
+
+    .last-name{
+      font-size: 40px;
+    }
+
+    .name-border{
+      width: 320px;
+    }
+
+    .contact-title{
+      width: 320px;
+      height: 40px;
+      font-size: 22px;
+      line-height: 25px;
+    }
 
   }
