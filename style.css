@@ -386,12 +386,7 @@ html{
 
   }
 
-  .rss-img{
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
+
 
   .code-img-link{
     width: 160px;
@@ -623,6 +618,13 @@ html{
       padding-left: 65px;
       margin-bottom: 20px;
     }
+
+    pre{
+      font-size: 16px;
+      padding: 0;
+      margin-left: -115px;
+    }
+
 
     /* footer */
 
