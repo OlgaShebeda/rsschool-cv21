@@ -87,11 +87,13 @@ html{
     background-color: #C0D8DE;
   }
   .container{
+    width: 100%;
     margin: 0 auto;
     max-width: 1365px;
     padding: 0 40px;
    }
    .container-column{
+     
      display: flex;
      flex-wrap: nowrap;
    }
@@ -99,16 +101,17 @@ html{
      max-width: 800px;
     background-color: #E4E6E7;
     margin-right: 40px;
-    
+    margin-top: 130px;
     padding-right: 20px;
   }
   
   .blue-container{
+    
     max-width: 560px;
     min-height: auto;
     background-color: #C0D8DE;
     margin-right: 50px;
-
+    margin-top: 130px;
     padding-top: 70px;
   }
   .light-title{
@@ -141,10 +144,14 @@ html{
   .left-container{
     width: 405px;
   }
+ 
    /*header start*/
    .header{
-    min-height: 70px;
-    background-color: #C0D8DE;
+     position: absolute;
+     width: 100%;
+     max-width: 1366px;
+    height: 70px;
+    
   }
   .header-container{
     display: flex;
@@ -158,6 +165,7 @@ html{
     height: 70px;
     padding-right: 40px;
   }
+
    .ul-nav-header{
     width: 1140px;
     display: flex;
@@ -166,14 +174,17 @@ html{
     justify-content: space-between;    
     padding-right: 0;
    }
+
    .li-nav-header{
     list-style: none;
-    font-size: 25px;
     margin-right: 25px;
+   
   }
+
   .li-nav-header:last-child{
     margin-right: 0px;
   }
+
   .header-link{
     font-family: Roboto;
     font-style: normal;
@@ -183,7 +194,91 @@ html{
     letter-spacing: 2px;
     color: #242424;
     text-decoration: none;
+    transition: color 0.2s linear;
+    position: relative;
   }
+
+  .header-link:hover{
+    color: #828282;
+  }
+
+  .header-link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    background-color: #828282;
+    position: absolute;
+    top: 100%;
+  }
+
+  .header-link:hover::after{
+    opacity: 1;
+  }
+
+  .nav-toggle{
+    width: 30px;
+    padding: 20px 0;
+    display: none;
+    position: absolute;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background:  none;
+    cursor: pointer;
+    top:  24px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  .nav-toggle-item{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #4F4F4F ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .nav-toggle-item::before, 
+  .nav-toggle-item::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #4F4F4F;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-toggle-item::before{
+    bottom: -9px;
+  }
+
+  .nav-toggle-item::after{
+    top: -9px;
+  }
+
+  .nav-toggle.active .nav-toggle-item{
+    background: none;
+  }
+
+  .nav-toggle.active .nav-toggle-item::before{
+    transform-origin: left top;
+    transform: rotate(-45deg)translateX(-3px);
+  }
+
+  .nav-toggle.active .nav-toggle-item::after{
+    transform-origin: left top;
+    transform: rotate(45deg)translateY(-1px);
+  }
+
   /*header end*/
 
 /*contacts start*/
@@ -386,12 +481,7 @@ html{
 
   }
 
-  .rss-img{
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
+
 
   .code-img-link{
     width: 160px;
@@ -405,9 +495,10 @@ html{
   /* footer start */
 
   .logo-rss-img-footer{
-    width: 80px;
-    height: 40px;
-    margin-right: 20px;
+    width: 50px;
+    height: 25px;
+    margin-left: 60px;
+    margin-right: 105px;
   }
 
   .text{
@@ -419,8 +510,10 @@ html{
   .icon-contact-foot{
     height: 25px;
     width: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-
+ 
   .contact-infom-foot{
     font-family: Roboto;
     font-style: normal;
@@ -435,13 +528,13 @@ html{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
+    width: 200px;
     padding: 30px;
     
   }
 
   .inf-footer{
-    width: 200px;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -470,6 +563,9 @@ html{
   }
 
   @media (max-width:991px) {
+    .light-container{
+      padding-right: 0;
+    }
     /* header */
     .ul-nav-header{
       width: 650px;
@@ -484,13 +580,13 @@ html{
       padding: 0;
     }
     .rss-img{
-      margin-right: 20px;
+      margin-right: 120px;
     }
   }
 
   @media (max-width:767px) {
     .rss-img{
-      margin-right: 20px;
+      margin-right: 200px;
     }
 
     /* footer */
@@ -526,18 +622,60 @@ html{
     .light-container{
       max-width: 479px;
       margin-top: 60px;
+      padding-right: 20px;
     }
 
     .left-container{
-      max-width: 320px;
-      margin-left: 40px;
+      max-width: 479px;
+      margin-left: 0px;
     }
 
     /* header */
+    .header{
+      width: 100%;
+      min-height: 200px;
+    }
 
+    .header-container{
+      width: 100%;
+      padding: 20px;
+    }
     .nav-header{
       display: none;
+      width: 95%;
+      position: absolute;
+
+      top: 35%;
+      background-color: #809ba1;
     }
+
+    .ul-nav-header{
+      display: block;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      
+    }
+
+    .li-nav-header{
+      margin: 0;
+    }
+
+    .header-link{
+      display: block;
+      font-size: 18px;
+      line-height: 35px;
+      padding-left: 10px;
+    }
+    .header-link::after{
+      width: 95%;
+    }
+
+    .nav-toggle{
+      display: block;
+    }
+
+
 
     /* contacts */
 
@@ -548,16 +686,18 @@ html{
     }
 
     .first-name{
-      font-size: 40px;
+      font-size: 35px;
       line-height: 70px;
+      padding-left: 15px;
     }
 
     .last-name{
-      font-size: 40px;
+      font-size: 35px;
     }
 
     .name-border{
-      width: 320px;
+      margin-left: 0 auto;
+      width: 315px;
     }
 
     .contact-title{
@@ -624,16 +764,24 @@ html{
       margin-bottom: 20px;
     }
 
+    pre{
+      font-size: 16px;
+      padding: 0;
+      margin-left: -115px;
+    }
+
+
     /* footer */
 
     .text{
       font-size: 20px;
       margin-right: 20px;
+      
     }
 
-    .rss-img{
+    .rss-img-footer{
       margin-left: 20px;
-      margin-right: 20px;
+      
     }
 
     .icon-contact-foot{
@@ -641,11 +789,17 @@ html{
       margin-right: 20px;
     }
 
-    .inf-footer{
+    .logo-rss-img-footer{
+      width: 100px;
+      height: 25px;
+      
+    }
+
+    .container-footer{
       flex-wrap: nowrap;
       max-width: 50%;
-      height: 25px;
-      margin-left: 20px;
+      height: 35px;
+      
     }
 
   }
