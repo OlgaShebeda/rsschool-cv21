@@ -43,4 +43,4 @@ coursework
 
 Master, Brest State University, Brest
 
- A1
+ A1+,A2
